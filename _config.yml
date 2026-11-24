@@ -1,0 +1,16 @@
+# ── CV 사이트 기본 설정 ───────────────────────────────────────────
+# url / baseurl 은 적지 않습니다. GitHub Pages 가 저장소 주소에 맞춰 자동으로 채웁니다.
+# (저장소 이름을 바꾸거나 개인 도메인을 붙여도 그대로 동작합니다.)
+title: Hyeon-Seok Seo
+description: "Hyeon-Seok Seo (서현석), M.S. student at Hallym University. Meniscus-guided 3D nanoprinting, plasmonic SERS substrates, and electrochemical biosensors."
+lang: en
+
+# Jekyll 설정 (건드릴 필요 없음)
+markdown: kramdown
+exclude:
+  - README.md
+  - shs.jpg
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

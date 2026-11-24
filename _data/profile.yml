@@ -1,0 +1,93 @@
+# ═══════════════════════════════════════════════════════════════
+#  기본 정보 (이름, 소속, 소개, 링크, 연구 분야, 기술)
+#  _en 은 영문, _ko 는 국문 화면에 나옵니다. 둘 다 채워 주세요.
+# ═══════════════════════════════════════════════════════════════
+
+name_en: Hyeon-Seok Seo
+name_ko: 서현석
+
+# 논문 저자 목록에서 굵게 표시할 내 이름 표기 (저널마다 다른 표기를 모두 적기)
+pub_names: ["Hyeon-Seok Seo", "Hyeonseok Seo"]
+
+role_en: M.S. student, School of Nano Convergence Technology, Hallym University
+role_ko: 한림대학교 나노융합스쿨 석사과정
+
+lab_en: Advanced Manufacturing nano-Geometry Lab (AMGL)
+lab_ko: AMGL (Advanced Manufacturing nano-Geometry Lab)
+lab_url: https://amg.hallym.ac.kr/
+
+location_en: Chuncheon, Republic of Korea
+location_ko: 강원특별자치도 춘천시
+
+bio_en: >-
+  I print three-dimensional micro- and nanoscale architectures from colloidal
+  nanoparticles with meniscus-guided 3D nanoprinting, and turn them into
+  plasmonic SERS substrates and electrochemical biosensors. I work with
+  Prof. Jong-Min Lee at AMGL, where I also run the lab's day-to-day operations.
+  Outside the lab I lead BioSync, a pre-incorporation startup building on-farm
+  biosensors for dairy herds.
+bio_ko: >-
+  콜로이드 나노입자를 메니스커스 유도 3D 나노프린팅으로 3차원 마이크로·나노
+  구조체로 만들고, 이를 플라즈모닉 SERS 기판과 전기화학 바이오센서로 발전시키는
+  연구를 합니다. AMGL(이종민 교수 연구실)에서 랩장으로 연구실 운영을 함께 맡고
+  있으며, 연구실 밖에서는 낙농가용 현장 진단 바이오센서를 만드는 예비창업팀
+  BioSync를 이끌고 있습니다.
+
+email: shs2243@gmail.com
+
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=G0LCZrgAAAAJ&hl=ko
+  - label: ORCID
+    url: https://orcid.org/0009-0000-6299-0060
+  - label: GitHub
+    url: https://github.com/HTKRS
+  - label: AMGL
+    url: https://amg.hallym.ac.kr/
+
+# ── 연구 분야 ───────────────────────────────────────────────────
+research:
+  - title_en: Meniscus-guided 3D nanoprinting
+    title_ko: 메니스커스 유도 3D 나노프린팅
+    text_en: >-
+      Direct printing of free-standing micro- and nanoscale architectures from
+      functional colloids: gold nanoparticles, PEDOT:PSS, upconversion
+      nanoparticles, and CNT composites.
+    text_ko: >-
+      금 나노입자, PEDOT:PSS, 상향변환 나노입자, CNT 복합체 같은 기능성 콜로이드로
+      스스로 서 있는 3차원 미세 구조체를 직접 인쇄합니다.
+  - title_en: Plasmonic nanostructures and SERS
+    title_ko: 플라즈모닉 나노구조와 SERS
+    text_en: >-
+      Uniform, low-cost SERS substrates built from nanoparticle assemblies, and
+      laser sintering of printed gold architectures.
+    text_ko: >-
+      나노입자 집합체로 균일하고 값싼 SERS 기판을 만들고, 인쇄한 금 구조체를
+      레이저로 소결하는 공정을 다룹니다.
+  - title_en: Electrochemical and optical biosensors
+    title_ko: 전기화학·광학 바이오센서
+    text_en: >-
+      Printed nanoparticle electrodes and SERS platforms for point-of-need
+      detection in health, livestock, and environmental samples.
+    text_ko: >-
+      인쇄한 나노입자 전극과 SERS 플랫폼으로 건강, 축산, 환경 시료를 현장에서
+      검출하는 센서를 개발합니다.
+
+# ── 기술 ────────────────────────────────────────────────────────
+skills:
+  - label_en: Fabrication
+    label_ko: 공정
+    text_en: Meniscus-guided 3D nanoprinting, colloidal nanoparticle inks, laser sintering
+    text_ko: 메니스커스 유도 3D 나노프린팅, 콜로이드 나노입자 잉크, 레이저 소결
+  - label_en: Characterization
+    label_ko: 분석
+    text_en: SEM and FE-SEM, Raman and SERS measurement
+    text_ko: SEM·FE-SEM, 라만·SERS 측정
+  - label_en: Simulation
+    label_ko: 시뮬레이션
+    text_en: TCAD (Silvaco Atlas), Python
+    text_ko: TCAD (Silvaco Atlas), Python
+  - label_en: Languages
+    label_ko: 언어
+    text_en: Korean (native), English (professional working proficiency)
+    text_ko: 한국어 (모국어), 영어 (업무상 소통 가능)

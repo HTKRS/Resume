@@ -1,0 +1,32 @@
+# ═══════════════════════════════════════════════════════════════
+#  학회 발표 (Presentations) : 최신이 위
+#    title    : 발표 제목 (모르면 "" 로 비워 두면 학회명만 나옵니다)
+#    kind     : Poster / Oral / Invited
+#    upcoming : true 면 "예정" 표시
+#    award    : 수상 시 상 이름 (선택)
+# ═══════════════════════════════════════════════════════════════
+- date: "2027.03"
+  conference: "IWAM 2027 (International Workshop on Advanced Materials)"
+  place_en: "Ras Al Khaimah, UAE"
+  place_ko: "UAE 라스알카이마"
+  kind: Poster
+  title: ""
+  upcoming: true
+- date: "2026.09"
+  conference: "E-MRS 2026 Fall Meeting"
+  place_en: "Warsaw, Poland"
+  place_ko: "폴란드 바르샤바"
+  kind: Poster
+  title: ""
+- date: "2026"
+  conference: "ISPSA 2026"
+  place_en: ""
+  place_ko: ""
+  kind: Poster
+  title: ""
+- date: "2026.06"
+  conference: "HIRC 2026"
+  place_en: "Pusan National University"
+  place_ko: "부산대학교 휴머노이드 후각디스플레이센터"
+  kind: Poster
+  title: ""

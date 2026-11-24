@@ -1,0 +1,83 @@
+# ═══════════════════════════════════════════════════════════════
+#  논문 (Publications) : 최신이 위
+#  AMGL 홈페이지 _data/publications.yml 과 같은 형식이라 항목을 그대로 복사해 올 수 있습니다.
+#    authors : 원문 순서 그대로. 제1·공동 제1저자 뒤에 ¹, 교신저자 뒤에 *
+#    impact / quartile / jcr : IF, Q, JCR 상위 % (jcr 은 Q1 일 때만 표시)
+#    tag : Main Cover 같은 추가 표시 (선택)
+# ═══════════════════════════════════════════════════════════════
+- title: "Bioinspired Microactuators Fabricated via One-step Meniscus-guided 3D Nanoprinting"
+  authors: "Seong-Jae Eom¹, Vasanthan Devaraj*, Sunghyun Kwak, Hyeon-Seok Seo, Thomas Zentgraf*, Won-Geun Kim*, Jong-Min Lee*"
+  journal: "Advanced Composites and Hybrid Materials"
+  impact: "15.5"
+  quartile: "Q1"
+  jcr: "4.3"
+  info: "Published online 2026.10.23"
+  year: 2026
+  doi: "10.1007/s42114-026-02151-5"
+  date: "2026.10"
+- title: "Interface-Dependent Failure Modes of Three-Dimensional Meniscus-Guided Printed Free-Standing Micropillars"
+  authors: "Hyeok Jeong¹, Ji-Houn Ahn, Soo-Young Bae, Seong-Jae Eom, Hyeon-Seok Seo, Min-Ki Choi, Jae-Hoon Park, Won-Geun Kim*, Jong-Min Lee*"
+  journal: "Applied Science and Convergence Technology"
+  impact: "1.3"
+  quartile: "Q4"
+  info: "35(5), 166–172"
+  year: 2026
+  doi: "10.5757/ASCT.2026.35.5.166"
+  date: "2026.09"
+  tag: "Main Cover"
+- title: "Engineering Disordered Many-Particle Plasmonic Nanoclusters for Wafer-Scale Uniform and Giant Electromagnetic Field Enhancement"
+  authors: "Minjun Kim¹, Vasanthan Devaraj, Hyeon-Seok Seo, Seong-Jae Eom, Jeong-Su Lee, Donghan Lee, Min Yong Jeon, Thomas Zentgraf, Jong-Min Lee"
+  journal: "Laser & Photonics Reviews"
+  impact: "9.7"
+  quartile: "Q1"
+  jcr: "8.1"
+  info: "20(15), e71610"
+  year: 2026
+  doi: "10.1002/lpor.71610"
+  date: "2026.07"
+- title: "Wafer-Scale, Simple, and Low-Cost Fabrication of Uniform SERS Substrates: A Review and Perspective"
+  authors: "Seong-Jae Eom¹, Hyeon-Seok Seo¹, Vasanthan Devaraj*, Jong-Min Lee*"
+  journal: "Current Applied Physics"
+  impact: "2.8"
+  quartile: "Q3"
+  info: "88, 36–43"
+  year: 2026
+  doi: "10.1016/j.cap.2026.04.017"
+  date: "2026.04"
+- title: "A one-step fabrication method for CNT–QD hybrid 3D architectures with engineered optoelectronic properties"
+  authors: "Jaemin Kim¹, Hyeongjip Kim¹, Ye-Won Lee¹, Seong-Jae Eom, Hyeon-Seok Seo, Sun-Hwa Gu, Sunghyun Kwak, Jae-Hyeon Ko, Won-Geun Kim*, Jong-Min Lee*"
+  journal: "Nanoscale"
+  impact: "5.2"
+  quartile: "Q1"
+  jcr: "23.8"
+  info: "18(9), 4950–4957"
+  year: 2026
+  doi: "10.1039/D5NR04848F"
+  date: "2026.03"
+- title: "3D printing of PEDOT:PSS microstructures: Capacitance scaling and mechanical flexibility for microelectronic devices"
+  authors: "Myung-Nam Jeong¹, Hyeon-Seok Seo¹, Jaewon Choi¹, Jae-Hoon Kim, Seong-Jae Eom, Ki Hoon Sung, Jong-Sik Moon, Vanna Chrismas Silalahi, Jong-Min Lee*"
+  journal: "Synthetic Metals"
+  impact: "4.5"
+  quartile: "Q2"
+  info: "317, 118075"
+  year: 2026
+  doi: "10.1016/j.synthmet.2026.118075"
+  date: "2026.01"
+- title: "Soft Magnetite–PEDOT:PSS Composite Microactuator Fabrication via Meniscus-Assisted 3D Printing"
+  authors: "Minjun Kim¹, Jae-Hoon Kim¹, Myung-Nam Jeong, Hyeon-Seok Seo, Seong-Jae Eom, Sung Yoon Cho, Ji Su Kim, Soyeon Ahn, Min Yong Jeon*, Jong-Min Lee*"
+  journal: "Advanced Materials Technologies"
+  impact: "6.0"
+  quartile: "Q2"
+  info: "11(2), e01312"
+  year: 2026
+  doi: "10.1002/admt.202501312"
+  date: "2026.01"
+- title: "Fabrication of Au nanotips via meniscus-guided 3D printing"
+  authors: "Seongjae Eom¹, Damun Heo¹, Hyeonseok Seo, Myeongnam Jeong, Vasanthan Devaraj, Jong-Min Lee*"
+  journal: "Journal of the Korean Physical Society"
+  impact: "1.0"
+  quartile: "Q3"
+  info: "87(2), 236–242"
+  year: 2025
+  doi: "10.1007/s40042-025-01399-2"
+  date: "2025.05"
