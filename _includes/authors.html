@@ -1,0 +1,13 @@
+{%- comment -%}
+  저자 목록 표시
+  - 내 이름(profile.yml 의 pub_names)을 굵게
+  - ¹(제1·공동 제1저자)와 *(교신저자)를 위첨자로
+  - 이름마다 <span class="au">로 감싸 이름 중간에서 줄이 바뀌지 않게 함
+  사용법: {% include authors.html authors=pub.authors %}
+{%- endcomment -%}
+{%- assign au = include.authors -%}
+{%- for n in site.data.profile.pub_names -%}
+  {%- capture b -%}<strong>{{ n }}</strong>{%- endcapture -%}
+  {%- assign au = au | replace: n, b -%}
+{%- endfor -%}
+<span class="au">{{ au | replace: "¹", "<sup>1</sup>" | replace: "*", "<sup>*</sup>" | replace: ", ", ",</span> <span class='au'>" }}</span>

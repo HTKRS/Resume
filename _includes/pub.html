@@ -1,0 +1,27 @@
+{%- comment -%}
+  논문 한 편 표시
+  사용법: {% include pub.html pub=pub num=num %}
+  - 내 이름 뒤에 ¹ 이 붙어 있으면 "공동 제1저자" 표시가 붙습니다.
+{%- endcomment -%}
+{%- assign pb = include.pub -%}
+{%- assign isfirst = false -%}
+{%- for n in site.data.profile.pub_names -%}
+  {%- assign marked = n | append: "¹" -%}
+  {%- if pb.authors contains marked -%}{%- assign isfirst = true -%}{%- endif -%}
+{%- endfor -%}
+<li class="pub">
+  <span class="pub-num" aria-hidden="true">{{ include.num }}</span>
+  <div class="pub-main">
+    <h3 class="pub-title">{% if pb.doi %}<a href="https://doi.org/{{ pb.doi }}" target="_blank" rel="noopener">{{ pb.title }}</a>{% else %}{{ pb.title }}{% endif %}</h3>
+    <p class="pub-authors">{% include authors.html authors=pb.authors %}</p>
+    <p class="pub-venue"><em>{{ pb.journal }}</em>{% if pb.info %}, {{ pb.info }}{% endif %} ({{ pb.year }})</p>
+    <p class="pub-meta">
+      {%- if isfirst %}<span class="chip">{% include t.html en="Co-first author" ko="공동 제1저자" %}</span>{% endif -%}
+      {%- if pb.tag %}<span class="chip chip-gold">{{ pb.tag }}</span>{% endif -%}
+      {%- if pb.impact %}<span class="metric">IF {{ pb.impact }}</span>{% endif -%}
+      {%- if pb.quartile %}<span class="metric">{{ pb.quartile }}</span>{% endif -%}
+      {%- if pb.quartile == "Q1" and pb.jcr %}<span class="metric"><span class="en">JCR top {{ pb.jcr }}%</span><span class="ko">JCR 상위 {{ pb.jcr }}%</span></span>{% endif -%}
+      {%- if pb.doi %}<span class="metric print-only">doi:{{ pb.doi }}</span>{% endif -%}
+    </p>
+  </div>
+</li>

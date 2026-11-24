@@ -1,0 +1,237 @@
+---
+layout: default
+---
+{%- assign p = site.data.profile -%}
+{%- assign pubs = site.data.publications -%}
+{%- assign journals = pubs | where: "type", "journal" -%}
+{%- assign procs = pubs | where: "type", "conference" -%}
+{%- assign pub_total = journals | size -%}
+{%- assign proc_total = procs | size -%}
+{%- assign first_count = 0 -%}
+{%- for pub in journals -%}
+  {%- for n in p.pub_names -%}
+    {%- assign marked = n | append: "¹" -%}
+    {%- if pub.authors contains marked -%}{%- assign first_count = first_count | plus: 1 -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign ventures = site.data.experience | where: "group", "venture" -%}
+{%- assign research_jobs = site.data.experience | where: "group", "research" %}
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-name" href="#top">{% include t.html en=p.name_en ko=p.name_ko %}</a>
+    <nav class="topbar-nav" aria-label="Sections">
+      <a href="#research">{% include t.html en="Research" ko="연구" %}</a>
+      <a href="#publications">{% include t.html en="Publications" ko="논문" %}</a>
+      <a href="#awards">{% include t.html en="Awards" ko="수상" %}</a>
+      <a href="#ventures">{% include t.html en="Ventures" ko="창업" %}</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn" data-set-lang="ko" aria-pressed="false">한국어</button>
+      </div>
+      <button type="button" class="print-btn" id="printBtn">{% include t.html en="Print or save as PDF" ko="인쇄·PDF 저장" %}</button>
+    </div>
+  </div>
+</header>
+
+<main class="page" id="top">
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="name">
+        <span class="en">{{ p.name_en }}</span><span class="ko">{{ p.name_ko }}</span>
+        <span class="name-alt"><span class="en" lang="ko">{{ p.name_ko }}</span><span class="ko" lang="en">{{ p.name_en }}</span></span>
+      </h1>
+      <div class="who">
+        <img class="portrait" src="assets/img/profile.jpg" width="76" height="76" alt="{{ p.name_en }}">
+        <p class="who-lines">
+          <span class="who-role">{% include t.html en=p.role_en ko=p.role_ko %}</span>
+          <span class="who-lab"><a href="{{ p.lab_url }}" target="_blank" rel="noopener">{% include t.html en=p.lab_en ko=p.lab_ko %}</a></span>
+          <span class="who-place">{% include t.html en=p.location_en ko=p.location_ko %}</span>
+        </p>
+      </div>
+      <p class="bio">{% include t.html en=p.bio_en ko=p.bio_ko %}</p>
+      <ul class="links">
+        <li><a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+        {%- for l in p.links %}
+        <li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="hero-figure">
+      {% include figure.html %}
+    </div>
+  </section>
+
+  <section class="row" id="research">
+    <h2 class="row-label">{% include t.html en="Research" ko="연구 분야" %}</h2>
+    <div class="row-body">
+      {%- for r in p.research %}
+      <div class="topic">
+        <h3 class="topic-title">{% include t.html en=r.title_en ko=r.title_ko %}</h3>
+        <p class="topic-text">{% include t.html en=r.text_en ko=r.text_ko %}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="row" id="education">
+    <h2 class="row-label">{% include t.html en="Education" ko="학력" %}</h2>
+    <div class="row-body">
+      {%- for e in site.data.education %}
+      <div class="entry">
+        <div class="entry-date">{{ e.period }}</div>
+        <div class="entry-main">
+          <h3 class="entry-title">{% include t.html en=e.title_en ko=e.title_ko %}</h3>
+          <p class="entry-org">{% include t.html en=e.org_en ko=e.org_ko %}</p>
+          {%- if e.note_en and e.note_en != "" %}
+          <p class="entry-note">{% include t.html en=e.note_en ko=e.note_ko %}</p>
+          {%- endif %}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="row" id="experience">
+    <h2 class="row-label">{% include t.html en="Research experience" ko="연구 경력" %}</h2>
+    <div class="row-body">
+      {%- for e in research_jobs %}
+      <div class="entry">
+        <div class="entry-date">{{ e.period }}</div>
+        <div class="entry-main">
+          <h3 class="entry-title">{% include t.html en=e.title_en ko=e.title_ko %}</h3>
+          <p class="entry-org">{% include t.html en=e.org_en ko=e.org_ko %}</p>
+          {%- if e.note_en and e.note_en != "" %}
+          <p class="entry-note">{% include t.html en=e.note_en ko=e.note_ko %}</p>
+          {%- endif %}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="row" id="publications">
+    <div class="row-label">
+      <h2>{% include t.html en="Publications" ko="논문" %}</h2>
+      <p class="row-note"><span class="en">{{ pub_total }} journal papers, {{ first_count }} as co-first author{% if proc_total > 0 %}, and {{ proc_total }} in conference proceedings{% endif %}</span><span class="ko">학술지 논문 {{ pub_total }}편 (공동 제1저자 {{ first_count }}편){% if proc_total > 0 %}, 프로시딩 {{ proc_total }}편{% endif %}</span></p>
+    </div>
+    <div class="row-body">
+      <ol class="pubs">
+        {%- for pub in journals %}
+        {%- assign num = pub_total | minus: forloop.index0 %}
+        {% include pub.html pub=pub num=num %}
+        {%- endfor %}
+      </ol>
+      <p class="legend"><span class="en"><sup>1</sup> first or co-first author, <sup>*</sup> corresponding author. IF, Q, and JCR percentile follow JCR 2025, best-ranked category.</span><span class="ko"><sup>1</sup> 제1·공동 제1저자, <sup>*</sup> 교신저자. IF, Q, JCR 상위 %는 JCR 2025의 최상위 분야 기준입니다.</span></p>
+      {%- if proc_total > 0 %}
+      <h3 class="sub-label">{% include t.html en="Conference proceedings" ko="학회 프로시딩" %}</h3>
+      <ol class="pubs">
+        {%- for pub in procs %}
+        {%- capture pnum %}P{{ forloop.index }}{% endcapture %}
+        {% include pub.html pub=pub num=pnum %}
+        {%- endfor %}
+      </ol>
+      {%- endif %}
+    </div>
+  </section>
+
+  <section class="row" id="presentations">
+    <h2 class="row-label">{% include t.html en="Presentations" ko="학회 발표" %}</h2>
+    <div class="row-body">
+      {%- for c in site.data.presentations %}
+      <div class="entry">
+        <div class="entry-date">{{ c.date }}</div>
+        <div class="entry-main">
+          <h3 class="entry-title">{{ c.conference }}{% if c.kind %} <span class="chip chip-quiet">{{ c.kind }}</span>{% endif %}{% if c.upcoming %} <span class="chip">{% include t.html en="Upcoming" ko="예정" %}</span>{% endif %}{% if c.award and c.award != "" %} <span class="chip chip-gold">{{ c.award }}</span>{% endif %}</h3>
+          {%- if c.title and c.title != "" %}
+          <p class="entry-org">{{ c.title }}</p>
+          {%- endif %}
+          {%- if c.place_en and c.place_en != "" %}
+          <p class="entry-note">{% include t.html en=c.place_en ko=c.place_ko %}</p>
+          {%- endif %}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="row" id="awards">
+    <h2 class="row-label">{% include t.html en="Awards and honors" ko="수상" %}</h2>
+    <div class="row-body">
+      {%- for a in site.data.awards %}
+      <div class="entry">
+        <div class="entry-date">{{ a.date }}</div>
+        <div class="entry-main">
+          <h3 class="entry-title">{% include t.html en=a.title_en ko=a.title_ko %}</h3>
+          <p class="entry-org">{% include t.html en=a.org_en ko=a.org_ko %}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="row" id="ventures">
+    <h2 class="row-label">{% include t.html en="Ventures" ko="창업" %}</h2>
+    <div class="row-body">
+      {%- for e in ventures %}
+      <div class="entry">
+        <div class="entry-date">{{ e.period }}</div>
+        <div class="entry-main">
+          <h3 class="entry-title">{% include t.html en=e.org_en ko=e.org_ko %}</h3>
+          <p class="entry-org">{% include t.html en=e.title_en ko=e.title_ko %}</p>
+          {%- if e.note_en and e.note_en != "" %}
+          <p class="entry-note">{% include t.html en=e.note_en ko=e.note_ko %}</p>
+          {%- endif %}
+        </div>
+      </div>
+      {%- endfor %}
+      <h3 class="sub-label">{% include t.html en="Selected programs" ko="선정된 지원사업" %}</h3>
+      {%- for g in site.data.programs %}
+      <div class="entry entry-tight">
+        <div class="entry-date">{{ g.date }}</div>
+        <div class="entry-main">
+          <p class="entry-line"><span class="entry-line-title">{% include t.html en=g.title_en ko=g.title_ko %}</span>{% if g.note_en and g.note_en != "" %}<span class="entry-line-note">{% include t.html en=g.note_en ko=g.note_ko %}</span>{% endif %}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="row" id="activities">
+    <h2 class="row-label">{% include t.html en="Mentoring and leadership" ko="멘토링·활동" %}</h2>
+    <div class="row-body">
+      {%- for a in site.data.activities %}
+      <div class="entry">
+        <div class="entry-date">{{ a.date }}</div>
+        <div class="entry-main">
+          <h3 class="entry-title">{% include t.html en=a.title_en ko=a.title_ko %}</h3>
+          {%- if a.note_en and a.note_en != "" %}
+          <p class="entry-note">{% include t.html en=a.note_en ko=a.note_ko %}</p>
+          {%- endif %}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="row" id="skills">
+    <h2 class="row-label">{% include t.html en="Skills" ko="기술" %}</h2>
+    <div class="row-body">
+      {%- for s in p.skills %}
+      <div class="entry entry-tight">
+        <div class="entry-date entry-date-label">{% include t.html en=s.label_en ko=s.label_ko %}</div>
+        <div class="entry-main">
+          <p class="entry-line">{% include t.html en=s.text_en ko=s.text_ko %}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p><span class="en">Last updated {{ site.time | date: "%Y.%m" }}</span><span class="ko">{{ site.time | date: "%Y.%m" }} 기준</span></p>
+</footer>

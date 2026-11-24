@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- assign p = site.data.profile %}
+  <title>{{ p.name_en }} ({{ p.name_ko }}) · CV</title>
+  <meta name="description" content="{{ site.description | escape }}">
+  <meta name="author" content="{{ p.name_en }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ p.name_en }} ({{ p.name_ko }})">
+  <meta property="og:description" content="{{ site.description | escape }}">
+  <meta property="og:url" content="{{ '/' | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/img/profile.jpg' | absolute_url }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="{{ '/' | absolute_url }}">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v={{ site.time | date: '%s' }}">
+  <script>
+    (function () {
+      var l = null;
+      try { l = localStorage.getItem('cv-lang'); } catch (e) {}
+      if (l !== 'ko' && l !== 'en') { l = (navigator.language || '').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en'; }
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.setAttribute('lang', l);
+    })();
+  </script>
+</head>
+<body>
+{{ content }}
+<script src="assets/js/main.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

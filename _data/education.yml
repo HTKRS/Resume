@@ -1,0 +1,18 @@
+# ═══════════════════════════════════════════════════════════════
+#  학력 (Education) : 최신이 위
+#    period : 화면 왼쪽에 나오는 기간. 모르면 "" 로 비워 두면 됩니다.
+# ═══════════════════════════════════════════════════════════════
+- period: "2024.09 – "
+  title_en: M.S. student, Semiconductor and Display Engineering
+  title_ko: 석사과정, 반도체·디스플레이공학
+  org_en: School of Nano Convergence Technology, Hallym University
+  org_ko: 한림대학교 나노융합스쿨
+  note_en: "Advisor: Prof. Jong-Min Lee"
+  note_ko: "지도교수: 이종민 교수"
+- period: ""
+  title_en: B.S., Semiconductor major
+  title_ko: 학사, 반도체 전공
+  org_en: School of Nano Convergence Technology, Hallym University
+  org_ko: 한림대학교 나노융합스쿨
+  note_en: "Entered in March 2016"
+  note_ko: "2016년 3월 입학"
