@@ -10,23 +10,29 @@
   place_en: "Ras Al Khaimah, UAE"
   place_ko: "UAE 라스알카이마"
   kind: Poster
-  title: ""
+  title: "Sub-milliwatt plasmonic-enhanced selective laser sintering (PE-SLS) of meniscus-guided 3D gold nanoparticle architectures for laser-programmable interconnects"
   upcoming: true
 - date: "2026.09"
   conference: "E-MRS 2026 Fall Meeting"
   place_en: "Warsaw, Poland"
   place_ko: "폴란드 바르샤바"
   kind: Poster
-  title: ""
-- date: "2026"
-  conference: "ISPSA 2026"
-  place_en: ""
-  place_ko: ""
-  kind: Poster
-  title: ""
+  title: "Plasmonic Enhanced–Selective Laser Sintering of Meniscus-Guided 3D Gold Nanoparticle Architectures for Optically Programmable Conductance Modulation"
 - date: "2026.06"
-  conference: "HIRC 2026"
-  place_en: "Pusan National University"
-  place_ko: "부산대학교 휴머노이드 후각디스플레이센터"
+  conference: "ISPSA 2026 (22nd International Symposium on the Physics of Semiconductors and Applications)"
+  place_en: "Jeju, Republic of Korea"
+  place_ko: "제주"
   kind: Poster
-  title: ""
+  title: "Localized Laser Sintering of Multi-Scale AuNP Freeform Structures Fabricated via Meniscus-Guided 3D Printing for Damage-Free Integration on Flexible Substrates"
+- date: "2026.06"
+  conference: "HIRC 2026 (Humanoid Olfactory Display International Research Conference)"
+  place_en: "Busan, Republic of Korea"
+  place_ko: "부산"
+  kind: Poster
+  title: "Localized Laser Sintering of Multi-Scale AuNP Freeform Structures Fabricated via Meniscus-Guided 3D Printing for Damage-Free Integration on Flexible Substrates"
+- date: "2026"
+  conference: "IWAM 2026 (International Workshop on Advanced Materials)"
+  place_en: "Ras Al Khaimah, UAE"
+  place_ko: "UAE 라스알카이마"
+  kind: Poster
+  title: "Plasmonic-Enhanced Selective Laser Sintering (PE-SLS) via 3D Nanoprinting for Next-Generation Semiconductor Packaging"
